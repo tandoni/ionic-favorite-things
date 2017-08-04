@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Favorite Things
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Favorite Color</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col id="box" [style.background-color]="favoriteColor" col-4 offset-4>{{favoriteColor}}</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4 col-md-2>
+        <button block type="button" ion-button (click)="setColor('blue')">
+          Blue
+        </button>
+      </ion-col>
+
+      <ion-col col-4 col-md-2>
+        <button color="secondary" block type="button" ion-button (click)="setColor('green')">
+          Green
+        </button>
+      </ion-col>
+
+      <ion-col col-4 col-md-2>
+        <button outline block type="button" ion-button (click)="setColor('red')">
+          Red
+        </button>
+      </ion-col>
+
+      <ion-col col-4 col-md-2>
+        <button clear block type="button" ion-button (click)="setColor('purple')">
+          Purple
+        </button>
+      </ion-col>
+
+      <ion-col col-4 col-md-2>
+        <button color="roseRed" block type="button" ion-button (click)="setColor('#800000')">
+          Rose Red
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <hr>
+  <h2>Favorite Number = {{favoriteNumber}}</h2>
+  <button type="button" ion-button (click)="updateNumber(1)">Up</button>
+  <button type="button" ion-button (click)="updateNumber(-1)">Down</button>
+  <button type="button" ion-button (click)="setNumber(0)">Reset</button>
+
+</ion-content>
